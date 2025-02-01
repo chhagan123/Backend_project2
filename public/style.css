@@ -1,0 +1,39 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Main Heading */
+.head {
+    font-size: 36px;
+    font-weight: bold;
+    color: #b92b27;  /* Quora Red */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+}
+
+/* Usernames */
+.userName {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333; /* Dark gray */
+    margin-top: 20px;
+}
+
+/* Post content */
+.post {
+    font-size: 20px;
+    font-weight: normal;
+    color: #666; /* Light gray */
+    margin-bottom: 20px;
+    padding: 10px;
+    border-bottom: 2px solid #ddd; /* Separator line */
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
