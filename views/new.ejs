@@ -4,14 +4,73 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add post</title>
+    <style>
+        /* General body styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* Form container */
+        form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
+        }
+
+        /* Input fields */
+        input[type="text"], textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        input[type="text"]:focus, textarea:focus {
+            outline: none;
+            border-color: #4CAF50; /* Green color when focused */
+        }
+
+        /* Button style */
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #45a049; /* Darker green when hovered */
+        }
+
+        /* Placeholder styling */
+        input::placeholder, textarea::placeholder {
+            color: #888;
+        }
+    </style>
 </head>
 <body>
+
     <form method="post" action="/posts">
-
-        <input placeholder="username" name="username" />
-        <textarea placeholder="post" name="post"></textarea>
-        <button onsubmit="submit">submit</button>
-
+        <input type="text" placeholder="Username" name="username" required />
+        <textarea placeholder="What's on your mind?" name="post" required></textarea>
+        <button type="submit">Submit</button>
     </form>
 
 </body>

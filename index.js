@@ -22,14 +22,17 @@ app.listen(port, () => {
 
 let posts = [
     {
+        id:"1a",
         username:"chhagan Rakhade",
         post : "i Love coding"
     },
     {
+        id:"2a",
         username : "nandu dumare",
         post : "i love the girl"
     },
     {
+        id:"3a",
         username : "harish govardhan",
         post:"i am satori"
         
@@ -51,11 +54,22 @@ app.get("/" ,(req,res) => {
     res.send("response ok in  home")
 })
 
+app.get("/posts/:id" ,(req,res) => {   
+    const id = req.params.id;
+    const post = posts.find((p) => id === p.id)
+    console.log(post);
+    res.render("details",{post})
+   
+ 
+    console.log(id);
+    res.send("id will have")
+})
+
 
 app.post('/posts',(req,res) => {
     const {username,post} = req.body;
     posts.push({username,post})
-    res.send("pushed ")
+    res.redirect("/posts")
   
     
 })

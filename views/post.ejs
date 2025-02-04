@@ -13,8 +13,17 @@
     
         <h1 class="userName"><%= post.username %></h1>
         <h1 class="post"><%= post.post %></h1>
+        <a href="http://localhost:3030/posts/<%= post.id%>">
+            <h4>see in detail</h4>
+        </a>
 
    <% }) %>
+    <br/>
+    <br/>
+
+    <a href="http://localhost:3030/posts/newposts">
+        <h1>Create Post</h1>
+    </a>
 
 </body>
 </html>
